@@ -1,5 +1,4 @@
 import express from 'express'
-// import route from './routes/.routes.js'
 import route from './routes/poke.routes.js'
 const app = express()
  const PORT = 8080
