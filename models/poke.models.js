@@ -10,7 +10,7 @@ const getPokemonsByName = async (name) => {
         const data = await result.json();
         return data
     }else{
-        throw new Error("Error !!!")
+        throw new Error(`No se encontro un pokemon con el nombre ${name}`)
     }
 }
 

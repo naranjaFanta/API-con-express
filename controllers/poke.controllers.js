@@ -11,7 +11,7 @@ const getPokemonsByName = async (req,res) => {
         const pokemon = await service.getPokemonsByName(name)
         res.send(pokemon)
     } catch (error) {
-        console.log("error"+error);
+        console.log("error :"+error);
         res.send({statuscode:401, message:"No se encontro al pokemon buscado."})
     }
   
