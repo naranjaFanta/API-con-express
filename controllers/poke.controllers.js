@@ -6,9 +6,15 @@ const getPokemons = async (req,res) => {
 }
 
 const getPokemonsByName = async (req,res) => {
-    const {name} = req.params
-    const pokemon = await service.getPokemonsByName(name)
-    res.send(pokemon)
+    try {
+        const {name} = req.params
+        const pokemon = await service.getPokemonsByName(name)
+        res.send(pokemon)
+    } catch (error) {
+        console.log("error"+error);
+        res.send({statuscode:401, message:"No se encontro al pokemon buscado."})
+    }
+  
 }
 
 export default {

@@ -8,9 +8,10 @@ const getPokemonsByName = async (name) => {
     const result = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
     if (result.status === 200) {
         const data = await result.json();
-        return data;
+        return data
+    }else{
+        throw new Error("Error !!!")
     }
-    return { info: "no se encontro resultado" }
 }
 
 export default {
