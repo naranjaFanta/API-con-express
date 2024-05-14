@@ -1,6 +1,6 @@
 
 const getPokemons = async () => {
-    const result = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10")
+    const result = await fetch("https://pokeapi.co/api/v2/pokemon?limit=30")
     const data = await result.json()
     return data.results
 }
@@ -8,7 +8,7 @@ const getPokemons = async () => {
 const getPokemonsByName = async (name) => {
     const result = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     const data = await result.json()
-    return data
+    return data 
 }
 
 export default {
